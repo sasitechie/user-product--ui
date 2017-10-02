@@ -1,0 +1,32 @@
+<md-card>
+        <form (ngSubmit)="onSubmit(userForm)" [formGroup]="userForm" >
+                
+    <md-card-header>
+        Profile Details
+    </md-card-header>
+        
+        <md-card-content>
+            
+           <div>
+               <label>Name :</label>
+               <input type="text" formControlName="userName">
+           </div>
+           <br/>
+           <div>
+                <label>Mobile :</label>
+                <input type="text" formControlName="mobile"  >
+            </div>
+           
+        </md-card-content>
+        <md-card-footer>
+                <button type="submit" md-raised-button color="accent"  [disabled]="!userForm.valid">Submit</button>
+               
+                <br/>
+                <div *ngIf = "showMsg">
+
+                    {{updatedVal.msg}}
+                </div>
+
+        </md-card-footer>
+    </form>
+    </md-card>
