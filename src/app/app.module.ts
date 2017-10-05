@@ -11,10 +11,11 @@ import { AppRoutingModule } from "./app.routing";
 import { OrderComponent } from "./order/order.component";
 import { HomeComponent } from "./home/home.component";
 import {UpdateProfileComponent  } from "./update-profile/update-profile.component";
+import { StockComponent } from "./stock/stock.component";
 import {  Data} from "./data";
 @NgModule({
   declarations: [
-    AppComponent,OrderComponent,HomeComponent,UpdateProfileComponent
+    AppComponent,OrderComponent,HomeComponent,UpdateProfileComponent,StockComponent
   ],
   imports: [
     BrowserModule,MaterialModule,AppRoutingModule, FormsModule, ReactiveFormsModule,HttpModule,HttpClientModule, FlexLayoutModule

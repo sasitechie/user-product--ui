@@ -1,11 +1,14 @@
 <div fxLayout.md = "row" fxLayoutAlign="space-between center"  fxLayoutAlign="center">
   <md-toolbar color="primary">
     <span fxFlexOffset="5%"></span>
-    <span><md-icon>mood</md-icon></span>
+    
+    <span><md-icon>home</md-icon></span>
 
-    <span ><button md-button [routerLink]="['/home']">Dashboard</button></span>
+    <span ><button md-button [routerLink]="['/home']"><h3>Dashboard</h3></button></span>
+    <span  fxFlex></span>
     <span fxFlexOffset="20%"> </span>
     <div fxLayout.md = "row" fxLayoutGap="10px">
+        <button md-button (click)="stock()">Stock</button>
     <button md-button (click)="order()">Orders</button>
     <button md-button (click)="update()">Update Profile</button>
     <button md-button >{{userVAl.userName}}</button>

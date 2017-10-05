@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
   
    this._route.navigate(['update-profile']);
   }
+
+  stock(){
+    this._route.navigate(['stock']);
+  }
   ngOnInit() {
 
   }

@@ -1,0 +1,21 @@
+
+
+<md-card>
+        <md-card-header>
+            Stock Details
+        </md-card-header>
+        <md-card-content>
+                <md-list >
+                    <div>
+                        <md-list-item  *ngFor = "let x of stockDet"> 
+                            <span mdLine> Item Name :  {{x.itemName}} </span><br/> 
+                            <span mdLine>  Item Id : {{x.itemId}} </span>
+                            <span mdLine> Item Model : {{x.itemModel}}  </span>
+                            <span mdLine> Stock Quantity : {{x.stockQty}} </span>
+                            <span mdLine fxFlex></span>
+                        </md-list-item>
+                    </div>
+                       </md-list>              
+        </md-card-content>
+        
+    </md-card>

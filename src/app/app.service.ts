@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import { Product } from "./product.interface";
 import { Order } from "./order/order.interface";
-
+import {  Stock} from "./stock.interface";
 @Injectable()
 export class AppService{
     constructor(private _http : HttpClient){
@@ -28,6 +28,10 @@ export class AppService{
     updateUser(userData :User) :Observable<User>{
         
         return this._http.post('http://localhost:8090/main/update', userData).map(data=>data as User);
+    }
+
+    getStockVal() : Observable<Stock[]>{
+        return this._http.get('http://localhost:9090/main/stock').map(data=>data as Stock[]);
     }
 
 }
